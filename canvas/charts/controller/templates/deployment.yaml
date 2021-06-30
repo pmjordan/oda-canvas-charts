@@ -27,14 +27,14 @@ spec:
               name: {{ .Release.Name }}-configmap
           - secretRef:
               name: {{ .Release.Name }}-secret
-      - name: seccon
-        image: {{.Values.deployment.secconimage}}
-        imagePullPolicy: Always
-        envFrom:
-          - configMapRef:
-              name: {{ .Release.Name }}-configmap
-          - secretRef:
-              name: {{ .Release.Name }}-secret
-        ports:
-        - name: seccon
-          containerPort: 5000        
+#      - name: seccon
+#        image: {{.Values.deployment.secconimage}}
+#        imagePullPolicy: Always
+#        envFrom:
+#          - configMapRef:
+#              name: {{ .Release.Name }}-configmap
+#          - secretRef:
+#              name: {{ .Release.Name }}-secret
+#        ports:
+#        - name: seccon
+#          containerPort: 5000        
