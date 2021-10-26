@@ -27,19 +27,6 @@ spec:
               name: {{ .Release.Name }}-configmap
           - secretRef:
               name: {{ .Release.Name }}-secret
-<<<<<<< HEAD
-#      - name: seccon
-#        image: {{.Values.deployment.secconimage}}
-#        imagePullPolicy: Always
-#        envFrom:
-#          - configMapRef:
-#              name: {{ .Release.Name }}-configmap
-#          - secretRef:
-#              name: {{ .Release.Name }}-secret
-#        ports:
-#        - name: seccon
-#          containerPort: 5000        
-=======
       - name: seccon
         image: {{.Values.deployment.secconimage}}
         imagePullPolicy: IfNotPresent
@@ -51,4 +38,3 @@ spec:
         ports:
         - name: seccon
           containerPort: 5000        
->>>>>>> d716e66dd277c5b7d920249e39ff32a06ce4f3ff
